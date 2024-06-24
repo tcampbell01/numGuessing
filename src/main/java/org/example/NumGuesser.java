@@ -5,9 +5,15 @@ import java.util.Scanner;
 
 public class NumGuesser {
 
+    //TODO: add error handling
+    //TODO: add loops and break;
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
+
+        System.out.println("Welcome to the Number Guessing Game.");
+
         boolean playAgain = true;
 
         while (playAgain) {
@@ -15,7 +21,7 @@ public class NumGuesser {
             boolean correctChoice = false;
 
             while (!correctChoice) {
-                System.out.print("Enter num: ");
+                System.out.print("Enter a number from 1 to 10: ");
                 int num = input.nextInt();
                 if (num == randomNumber) {
                     correctChoice = true;
